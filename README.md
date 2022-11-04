@@ -6,6 +6,8 @@ Este é o meu portfólio, nele estão reunidos todas as minhas experiências, sk
 
 ### Preview
 
+[Clique Aqui](https://my-portfolio-nine-zeta-94.vercel.app/#hero)
+
 ### Tecnologias
 
 - NextJS
