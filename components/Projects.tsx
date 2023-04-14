@@ -11,6 +11,21 @@ type Props = { projects: ProjectType[] };
 const Projects = ({ projects }: Props) => {
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
   const allProjects = projects.length;
+
+  console.log(projects);
+
+  let listaDeObjetos = projects;
+
+  listaDeObjetos.sort((a, b) => {
+    if (a._createdAt > b._createdAt) {
+      return -1;
+    } else if (a._createdAt < b._createdAt) {
+      return 1;
+    } else {
+      return 0;
+    }
+  });
+
   return (
     <div
       className="flex flex-col h-screen text-left items-center w-full 
@@ -80,7 +95,7 @@ const Projects = ({ projects }: Props) => {
         >
           {/* here you can also pass any other element attributes. Also, you can use your custom components as slides */}
 
-          {projects.map((project, index) => {
+          {listaDeObjetos.map((project, index) => {
             return (
               <Project
                 key={project._id}
